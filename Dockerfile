@@ -4,6 +4,9 @@ FROM node:18-bullseye-slim as base
 # install openssl and sqlite3 for prisma
 RUN apt-get update && apt-get install -y openssl sqlite3
 
+# log
+RUN echo "Hello"
+
 # install all node_modules, including dev
 FROM base as deps
 
